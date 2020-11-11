@@ -10,7 +10,9 @@ namespace Publish.AzureServiceBus.Mapper
         {
             CreateMap<SalesOrderHeader, InvoiceHeaderRequest>();
             CreateMap<SalesOrderDetail, InvoiceDetailRequest>()
-                .ForMember(dest => dest.BaseLine, opt => opt.MapFrom(src => src.LineNum));               
+                .ForMember(dest => dest.BaseLine, opt => opt.MapFrom(src => src.LineNum));      
+                
+            
         }
     }
 }

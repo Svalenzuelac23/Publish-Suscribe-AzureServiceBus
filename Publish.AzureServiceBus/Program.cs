@@ -49,6 +49,10 @@ namespace Publish.AzureServiceBus
             //MAPPER EL OBJETO AL TIPO FACTURA QUE SE DEBE DE ENVIAR AL BUS
             var mapper = serviceProvider.GetService<IMapper>();
             InvoiceHeaderRequest invoice = mapper.Map<InvoiceHeaderRequest>(orden);
+            foreach (var line in invoice.Details)
+            {
+                line.BaseEntry = Int32.Parse(input);
+            }
 
             //PUBLICAR UN MENSAJE EN AZURE SERVICE BUS
             var eventBus = serviceProvider.GetService<IEventBus>();

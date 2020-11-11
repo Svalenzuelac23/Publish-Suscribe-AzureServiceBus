@@ -41,28 +41,7 @@ namespace Publish.AzureServiceBus.Models
         public DateTime? InvDate { get; set; }
         [Column("U_Drivers")]
         public string IdDriver { get; set; }
-        [Column("U_Helpers")]
-        //public string IdHelper { get; set; }
-        //[Column("U_Company")]
-        //public string IdCompany { get; set; }
-        //[Column("U_Joined")]
-        //public string Joined { get; set; }
-        //[Column("U_TruckNo")]
-        //public string IdTruck { get; set; }
-        //[Column("U_Status")]
-        //public string Status { get; set; }
-        //[Column("U_Analyzed")]
-        //public short? Analyzed { get; set; }
-        //[Column("U_Route")]
-        //public string RouteNumber { get; set; }
-        //[Column("U_AuthorizedBy")]
-        //public int? IdAuthorized { get; set; }
-        //[Column("U_SOType")]
-        //public string SalesOrderType { get; set; }
-        //[Column("U_StatusSD")]
-        //public string StateSd { get; set; }
-        //[Column("U_StopNumber")]
-        //public short? StopNumber { get; set; }
+        [Column("U_Helpers")]     
         public IEnumerable<SalesOrderDetail> Details { get; set; }
     }
 }
